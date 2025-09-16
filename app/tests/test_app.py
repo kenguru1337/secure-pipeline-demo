@@ -1,14 +1,12 @@
 import pytest
-from app.app import app  # Импортируем экземпляр Flask
+from app.app import app
 
-# Фикстура для тест-клиента
 @pytest.fixture
 def client():
     app.testing = True
     with app.test_client() as client:
         yield client
 
-# Тест главной страницы
 def test_home(client):
     response = client.get('/')
     if response.status_code != 200:
@@ -16,7 +14,6 @@ def test_home(client):
     if response.get_json() != {"message": "Hello from Secure CI/CD Pipeline!"}:
         raise AssertionError(f"Response JSON mismatch: {response.get_json()}")
 
-# Тест health endpoint
 def test_health(client):
     response = client.get('/health')
     if response.status_code != 200:
