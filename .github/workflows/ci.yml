@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r app/requirements.txt
    
 
       # 5. Run unit tests (PYTHONPATH добавлен!)
