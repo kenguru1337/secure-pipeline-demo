@@ -1,8 +1,0 @@
--r app/requirements.txt
-pytest==7.4.0
-bandit==1.7.4
-semgrep==1.37.0
-pip-audit
-flake8
-pbr
-

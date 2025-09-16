@@ -4,3 +4,4 @@ bandit==1.7.4
 semgrep==1.37.0
 pip-audit==2.6.3
 flake8==7.1.0
+pbr==5.11.1
