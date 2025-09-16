@@ -34,8 +34,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install -r app/requirements.txt
-          pip install pytest bandit semgrep pip-audit flake8
+          pip install -r requirements-dev.txt
+   
 
       # 5. Run unit tests (PYTHONPATH добавлен!)
       - name: Run unit tests
